@@ -72,9 +72,6 @@ def generate_sprints(start_date="2024-02-29", sprint_length=14):
 
 events = generate_sprints()
 
-for event in events:
-    print(event)
-
 
 calendar_options = {
     "editable": "true",
