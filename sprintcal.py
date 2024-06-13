@@ -96,6 +96,13 @@ calendar_options = {
 
 mode = "daygrid"
 
+now = datetime.now()
+year = now.year
+month = now.month
+
+# Format the string as "YYYY-MM-01"
+formatted_date = f"{year}-{month:02d}-01"
+
 if mode == "daygrid":
     calendar_options = {
         **calendar_options,
@@ -104,7 +111,7 @@ if mode == "daygrid":
             "center": "title",
             "right": "dayGridDay,dayGridWeek,dayGridMonth"
         },
-        "initialDate": "2024-05-01",
+        "initialDate": formatted_date,
         "initialView": "dayGridMonth",
     }
 elif mode == "timegrid":
