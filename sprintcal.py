@@ -6,7 +6,7 @@ st.set_page_config(page_title="Sprint Calendar", page_icon="📆")
 
 from datetime import datetime, timedelta
 
-def generate_sprints(start_date="2024-02-29", sprint_length=14):
+def generate_sprints(start_date="2025-10-23", sprint_length=14):
     """
     Generate a list of dictionaries representing even and odd numbered sprints.
 
