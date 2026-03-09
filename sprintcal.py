@@ -6,20 +6,21 @@ st.set_page_config(page_title="Sprint Calendar", page_icon="📆")
 
 from datetime import datetime, timedelta
 
-def generate_sprints(start_date="2025-10-23", sprint_length=14):
+def generate_sprints(start_date="2025-10-23", sprint_length=14, start_sprint_number=48):
     """
     Generate a list of dictionaries representing even and odd numbered sprints.
 
     Args:
     start_date (str): Start date in the format "YYYY-MM-DD".
     sprint_length (int): Length of each sprint in days.
+    start_sprint_number (int): The sprint number to assign to the first sprint.
 
     Returns:
     list: List of dictionaries representing sprints.
     """
     start_date = datetime.strptime(start_date, "%Y-%m-%d")
     sprints = []
-    sprint_num_offset = 4
+    sprint_num_offset = start_sprint_number - 1
     meeting_duration = 1
 
     for i in range(1, 50):
